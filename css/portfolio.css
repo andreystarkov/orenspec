@@ -1,0 +1,215 @@
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+.container > header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	background: rgba(0,0,0,0.01);
+}
+
+
+.thin {
+font-family: 'Open Sans Condensed', sans-serif;
+font-weight: 300;
+font-size: 2em;
+}
+
+h2.thin { font-size: 3.1em; }
+
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.pf-grid {
+	padding: 20px 20px 20px 20px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.pf-grid li {
+	display: inline-block;
+	width: 440px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+
+.pf-grid figure {
+	margin: 0;
+	position: relative;
+}
+
+
+.pf-grid .pf-big {
+	width: 100%;
+	height: 140px;
+	margin-left: 0px;
+	left: 0px;
+	bottom: 60px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+.bt-cross {
+width: 100%;
+height: 100%;
+background: url(../images/cross.png) center center no-repeat;
+}
+
+.pf-grid figcaption a {
+	position:absolute;
+	color:#FFF;
+	display:block;
+	text-decoration:none;
+	margin:0 auto;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+	border-radius:5px;
+	font-weight: 400;
+
+	background: rgba(116, 136, 148, 0.5);
+	box-shadow: inset 0 0 0 rgba(0,0,0,0);
+	text-align:center;
+	padding:3px 10px;
+
+}
+
+.pf-grid figcaption {
+	position: absolute;
+	top: 0; left: 0; padding: 20px;
+
+	font-family: 'Open Sans Condensed', sans-serif;
+	box-shadow: 5px 0 25px rgba(0,0,0,0.4);
+
+	color: #888;
+}
+
+.pf-grid figcaption p {
+	padding-top: 5px;
+	color: #d3d3d3; display: block;
+	font-family: 'Open Sans';
+	font-size: 12px;
+	line-height: 17px;
+}
+.pf-grid figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+}
+.pf-grid figure img {
+
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.pf-grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #333;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+	color: #888;
+}
+
+.pf-grid figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+}
+
+
+.pf-grid li {
+	-webkit-perspective: 1700px;
+	-moz-perspective: 1700px;
+	perspective: 1700px;
+	-webkit-perspective-origin: 0 50%;
+	-moz-perspective-origin: 0 50%;
+	perspective-origin: 0 50%;
+}
+
+.pf-grid figure {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.pf-grid figure > div {
+	overflow: hidden;
+}
+
+.pf-grid figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .pf-grid figure:hover img,
+.pf-grid figure.cs-hover img {
+	-webkit-transform: translateX(25%);
+	-moz-transform: translateX(25%);
+	-ms-transform: translateX(25%);
+	transform: translateX(25%);
+}
+
+.pf-grid figcaption {
+	height: 310px;
+	width: 53%;
+	margin-left: -3px;
+	margin-top: -3px;
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: rotateY(-90deg);
+	-moz-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .pf-grid figure:hover figcaption,
+.pf-grid figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+@media screen and (max-width: 31.5em) {
+	.pf-grid {
+		padding: 10px 10px 100px 10px;
+	}
+	.pf-grid li {
+		width: 100%;
+		min-width: 300px;
+	}
+}
